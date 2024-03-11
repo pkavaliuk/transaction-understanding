@@ -9,6 +9,6 @@ jobs:
       - uses: actions/setup-java@v4.1.0
         with:
           java-version: '17'
-          distribution: jdk
+          distribution: 'jdk'
       - run: mvn clean build -Dmaven.test.skip
       
