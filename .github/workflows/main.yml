@@ -9,6 +9,7 @@ jobs:
       - uses: actions/setup-java@v4.1.0
         with:
           java-version: '17'
-          distribution: 'jdk'
+          distribution: 'oracle'
+          cache: 'maven'
       - run: mvn clean build -Dmaven.test.skip
       
