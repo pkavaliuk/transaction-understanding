@@ -1,6 +1,7 @@
 name: Build
 run-name: ${{ github.actor }} is running this phase
-on: [push]
+'on':
+  - push
 jobs:
   build-project:
     runs-on: ubuntu-latest
@@ -12,4 +13,3 @@ jobs:
           distribution: 'oracle'
           cache: 'maven'
       - run: mvn clean build -Dmaven.test.skip
-      
