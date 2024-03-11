@@ -1,0 +1,13 @@
+name: Build
+run-name: ${{ github.actor }} is running this phase
+on: [push]
+jobs:
+  build-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4.1.0
+        with:
+          java-version: '17'
+      - run: mvn clean build -Dmaven.test.skip
+      
