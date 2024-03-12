@@ -1,7 +1,6 @@
 name: Build
 run-name: ${{ github.actor }} is running this phase
-'on':
-  - push
+on: [push]
 jobs:
   build-project:
     runs-on: ubuntu-latest
