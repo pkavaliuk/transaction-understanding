@@ -8,4 +8,10 @@ public interface UserService {
 
     List<TestUser> printAllUsers();
 
+    TestUser addUser(TestUser testUser);
+
+    TestUser updateFast(Integer id, String name);
+
+    TestUser updateSlowly(Integer id, String name);
+
 }
